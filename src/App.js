@@ -11,10 +11,11 @@ class App extends Component {
   componentWillMount() {
     this.props.updateBadge()
 
+    //consumir servicio de emails cada 90 segundos
     this.interval = setInterval(() => {
       this.props.addToList()
       this.props.updateBadge()
-    }, 3000);
+    }, 90000);
 
     this.menu = setTimeout(() => {
       this.props.toggleSidebar()
