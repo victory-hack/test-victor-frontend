@@ -1,0 +1,230 @@
+@import "variables";
+
+$backgrounContet: $primariGray;
+$direction: center;
+
+.Content-first{
+	display: contents;
+
+	.Content-empty {
+		background-color: $bodyBackground;
+		display: flex;
+		flex-direction: column;
+		align-items: $direction;
+		align-self: $direction;
+
+		.mail-icon {
+			font-size: 12em;
+			color: #B5B5B5;
+		}
+	}
+
+}
+
+.Content {
+	background-color: $bodyBackground;
+	display: flex;
+	flex-direction: column;
+	padding: 0px 40px 40px 40px;
+	position: relative;
+	left: -150%;
+	opacity: 0.3s;
+	transition-duration: 1s;
+	&.open {
+		left: 0%;
+		opacity: 1;
+	}
+
+	.contentBody {
+		display: contents;
+	}
+	
+	.Wrapper-content {
+		display: contents;
+
+		.Content-header {
+			padding-top: $paddingCustom;
+			padding-bottom: $paddingCustom;
+		}
+
+	}
+
+	.content-section {
+		margin: 0px 0px 25px 0px;
+		padding: $paddingCustom - 15px $paddingCustom - 10px;;
+		border-radius: $border1;
+		box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.12);
+		background-color: $colorWhite;
+
+		.left-tags {
+			display: inline-flex;
+			width: 10%;
+			min-width: 40px;
+		}
+
+		.rigth-tags {
+			display: inline-flex;
+			width: 80%;
+
+			.item-tags {
+				padding: 2px 10px 2px 10px;
+				border-radius: $border1 + 1px;
+				box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.02);
+				border: $border1 solid $borderTags;
+			}
+		}
+
+	}
+
+	.Content-container {
+		background-color: $colorWhite;
+		height: 100%;
+		border-radius: $border4;
+		// border: $border1 solid $colorBorder;
+		box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.12);
+		position: relative;
+
+		.Wrapper-header {
+			padding: 20px 20px 20px 20px;    
+			min-height: 396px;
+		}
+		
+		.Mail-header {
+			padding-bottom: $paddingCustom;
+			padding-top: $paddingCustom + 20px;
+		}
+
+		.Mail-from {
+			font-size: $fonsizeMax;
+			font-weight: bold;
+		}
+
+		.Mail-date {
+			float: right;
+			color: #9B9B9B;
+			font-size: $fonsizeLittle;
+		}
+
+		.Mail-text {
+			font-size: $fonsizeMiddle;
+			margin-bottom: $paddingCustom + 20px;
+		}
+
+		.Mail-from
+		, .Mail-date {
+			display: inline-block;
+		}
+
+	}
+
+}
+header{
+	border-bottom: 2px solid $colorBorder;
+    display: flex;
+    flex-direction: row;
+    max-height: 45px;
+    min-height: 45px;
+
+	.left-menu-header{
+		display: inline-flex;
+		width: 79%;
+		align-items: center;
+		padding-left: $paddingCustom + 20px;
+
+		.deleteMailButton {    
+			width: 65px;
+			height: 30px;
+			background-color: $colorRed;
+			color: $colorWhite;
+		}
+		
+		.spamMailButton {    
+			margin-left: $paddingCustom;
+			width: 60px;
+			height: 30px;
+			background-color: $bodyBackground;
+			color: #b8b9b9;
+		}
+		
+		.spamMailButton:hover {    
+			animation: pulse-shadow--collection 3s infinite
+		}
+
+	}
+
+	.rigth-menu-header{
+		display: inline-flex;
+		width: 21%;
+		justify-content: flex-end;
+		align-items: center;
+		padding-right: $paddingCustom;
+
+		.unreadMailButton {
+			width: 115px;
+			height: 30px;
+			background-color: hsl(199, 82%, 62%);
+			color: #ffffff;
+
+		}
+	}
+}
+
+.left-menu {
+	display: inline-block;
+	width: 79%;
+
+	.Content-title {
+		font-size: $fonsizeMax;
+		margin: 0;
+	}
+}
+
+.rigth-menu {
+    display: inline-flex;
+    width: 21%;
+    justify-content: space-around;
+	
+	.icon-action {
+		font-size: $fonsizeBig;
+		color: $colorWhite;
+	}
+
+	.icon-action:hover {
+		color: $colorWhite;
+	}
+}
+.content-icon-viewer.inactive {
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.content-footer{
+	bottom: 0px;
+    position: absolute;
+    width: 100%;
+    flex-direction: row;
+	display: flex;
+	border-top: $border1 solid $colorBorder;
+}
+
+.icon-footer{
+	display: inline-flex;
+    padding: $paddingCustom - 10px;
+	width: 100%;
+	background-color: $colorGrayLight;
+	color: $colorGraySemi;
+	border-bottom-left-radius: $border4;
+}
+
+.replay-footer{
+	display: inline-flex;
+    width: 100px;
+    padding: $paddingCustom - 10px;
+    background-color: $colorBlue;
+    text-align: center;
+	flex: 1 1;
+	color: $colorWhite;
+	border-bottom-right-radius: $border4;
+	font-weight: 100;
+	font-size: $fonsizeMiddle;
+}

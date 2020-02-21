@@ -1,0 +1,52 @@
+
+$primariGray: hsl(240, 6%, 97%);
+$colorWhite: hsl(0, 0%, 100%);
+$colorBorder: hsl(0, 0%, 71%);
+$colorBorderForte: hsl(0, 0%, 55%);
+$colorBorderBlue: hsl(212, 73%, 59%);
+
+$colorGray: #F4F5F5;
+$colorGraySemi: $colorBorder;
+$colorGrayLight: hsl(180, 5%, 96%);
+$colorLight: hsl(207, 48%, 95%);
+$colorRed: #FC3401;
+$colorBlue: #03B9ED;
+$colorBlueLight: #EEFAFF;
+
+$paddingCustom: 20px;
+$fonsizeLittle: 12px;
+$fonsizeMiddle: 14px;
+$fonsizeMax: 16px;
+$fonsizeBig: 19px;
+
+$border4: 4px;
+$border1: 1px;
+$minWidthList: 320px;
+
+$bodyBackground: $colorGrayLight;
+$backgroundLight: $colorBlueLight;
+$borderTags: hsl(0, 0%, 89%);
+$customHover: hsl(0, 0%, 98%);
+
+@keyframes pulse-shadow--collection {
+	0% {
+		-webkit-box-shadow: 0 0;
+		box-shadow: 0 0;
+	}
+  
+	70% {
+		box-shadow: 0 0 5px 10px rgba(255,255,255,0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(255,255,255,0);
+	}
+  }
+  @keyframes load8 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
